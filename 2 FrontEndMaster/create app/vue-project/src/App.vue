@@ -1,27 +1,22 @@
 <script>
+import counter from './components/BaseCounter.vue'
+
   export default {
+    components: {
+      counter, 
+    },
+
     data() {			
       return {
-        incrementAmount: 10,
-        count: 10,
-
         msg: "its work !",
         nbrList: [1, 2, 3]
       }
-		},
-    
-    methods: {
-      changeIncrementAmount() {
-        this.incrementAmount =Number(event.target.value);
-      },
-      incrementCount() {
-        this.count += this.incrementAmount;
-      }
-    }  
+		},     
   }
 </script>
 
 <template>
+  
   <div>
     <h1>project vur js</h1>
     <div>
@@ -36,17 +31,6 @@
       </ul>
 	  </div>
 	</div>
-  <hr>
-  <div>
-    <h1>counter</h1>
-      <p>{{ count }}</p>
-      <button v-on:click="incrementCount">increment Count</button>
-      <h1>{{incrementAmount}}</h1>
-      <div>
-        <label for="incrementAmount"> increment by</label>
-        <input
-          type="number"
-        />
-      </div>
-  </div>
+	<counter />
+	<counter />
 </template>
