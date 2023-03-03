@@ -16,8 +16,7 @@
 	}
 </script>	
 
-<template>
-	
+<template>	
 <hr>  
 <div>
 	<h1>counter</h1>
@@ -27,7 +26,7 @@
 	<div>
 	<label for="incrementAmount"> increment by</label>
 	<input
-		type="number"
+		type="number" v-model="incrementAmount"
 	/>
 	</div>
   </div>
