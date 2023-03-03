@@ -10,8 +10,9 @@
 </script>
 
 <template>
+	<hr>
 	<div>
-		<h1>project vur js</h1>
+		<h1>Random numbers</h1>
 		<div>
 		<!-- if else statement -->
 		<p v-if="msg.length % 2 === 0"> Even : {{msg.toUpperCase()}}</p>
