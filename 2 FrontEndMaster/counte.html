@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>counting a number with vue js</h1>
+    <div id="app">
+      <h1>counter</h1>
+      <p>{{ count }}</p>
+      <button v-on:click="incrementCount">increment Count</button>
+      <h1>{{incrementAmount}}</h1>
+      <div>
+        <label for="incrementAmount"> increment by</label>
+        <input
+          type="number"
+        />
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const { createApp } = Vue;
+
+      const app = createApp({
+        data() {
+          return {
+            incrementAmount: 10,
+            count: 10,
+          };
+        },
+        methods: {
+          changeIncrementAmount() {
+            this.incrementAmount =Number(event.target.value);
+          },
+          incrementCount() {
+            this.count += this.incrementAmount;
+          }
+        }
+      })
+      app.mount("#app");
+    </script>
+  </body>
+</html>

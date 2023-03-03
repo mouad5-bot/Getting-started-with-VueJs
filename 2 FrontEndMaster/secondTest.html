@@ -10,13 +10,12 @@
     <h1>project vur js</h1>
     <div id="app">
 		<!-- if else statement -->
-		<!-- <p v-if="msg.length % 2 === 0"> Even : {{msg.toUpperCase()}}</p>
-		<p v-else> Odd : {{msg}}</p> -->
-
-		<!-- for loop -->
-		<ul>
-			<li v-for="character in characters">{{ character.name }}</li>
-		</ul>
+		<p v-if="characters.length === 0"> Opss !! There are no characters </p>
+		<p v-else> 
+			<ul>
+				<li v-for="character in characters">{{ character.name }}</li>
+			</ul>
+		</p>
 	</div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -26,15 +25,15 @@
 			data: () => 
 			({
 				characters:[
-					{
-						name : 'mouad'
-					},
-					{
-						name : 'khalid'
-					},
-					{
-						name : 'UsF'
-					}
+					// {
+					// 	name : 'mouad'
+					// },
+					// {
+					// 	name : 'khalid'
+					// },
+					// {
+					// 	name : 'UsF'
+					// }
 				]
 			})  
 		}).mount('#app');
