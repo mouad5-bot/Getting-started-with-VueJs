@@ -1,18 +1,22 @@
 <script>
 	export default {		
 		data: () => ({	
-			characterListNew: [
+			listCharacter: [
 				{
-					name : "car",
-					element : ["res", "bleu", "white"]
+					name : "animals",
+					element : ["dog", "cat", "monkey"]
 				},
 				{
-					name : "animal",
-					element : ["dog", "cat", "monky"]
+					name : "first",
+					element : ["dog"]
 				},
 				{
-					name : "country",
-					element : ["morocco", "franch", "usa"]
+					name : "second",
+					element : ["cat"]
+				},
+				{
+					name : "theird",
+					element : ["monkey"]
 				}
 			],
 			favoriteCharacter: [],	
@@ -29,9 +33,9 @@
 	<hr>
 	<div>
 		<h2>characters New</h2>
-		<p v-if="characterListNew.length === 0"> There are no character</p>
-		<ul v-else-if="characterListNew.length % 2 === 0">
-			<li v-for="(character, index) in characterListNew" :key="`even-charcter-${index}`">
+		<p v-if="listCharacter.length === 0"> There are no character</p>
+		<ul v-else-if="listCharacter.length % 2 === 0">
+			<li v-for="(character, index) in listCharacter" :key="`even-charcter-${index}`">
 				<p>{{ character.neme }}</p>
 				<button @click="favoriteCharacter(character)"> $%*! favorite</button>
 			</li>
